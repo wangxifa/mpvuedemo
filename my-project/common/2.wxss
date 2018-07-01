@@ -1,0 +1,339 @@
+.flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex .flex-item {
+    flex: 1;
+    overflow: hidden;
+}
+
+.flex-start {
+    align-items: flex-start;
+}
+
+.clear:after {
+    content: "";
+    display: block;
+    height: 0;
+    overflow: hideen;
+    clear: both;
+}
+
+.elipsis {
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.arrow {
+    position: relative;
+    width: 12rpx;
+    height: 12rpx;
+    font-size: 0;
+}
+
+.arrow,.arrow:after {
+    display: inline-block;
+}
+
+.arrow:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-left: 2rpx solid #c6cacf;
+    border-bottom: 2rpx solid #c6cacf;
+    transform: translateX(25%) rotate(45deg);
+}
+
+.arrow-up {
+    transform: rotate(90deg);
+}
+
+.arrow-right {
+    transform: rotate(180deg);
+}
+
+.arrow-down {
+    transform: rotate(270deg);
+}
+
+.loadmore {
+    padding: 20rpx;
+    text-align: center;
+    color: #999;
+    font-size: 26rpx;
+}
+
+.loadmore .loading-dot {
+    padding-left: 6rpx;
+    animation-name: a;
+    animation-duration: 1.4s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+
+.loadmore .loading-dot:nth-child(2) {
+    animation-delay: .2s;
+}
+
+.loadmore .loading-dot:nth-child(3) {
+    animation-delay: .4s;
+}
+
+@-webkit-keyframes a {
+    0% {
+        opacity: .2;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    to {
+        opacity: .2;
+    }
+}
+
+@keyframes a {
+    0% {
+        opacity: .2;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    to {
+        opacity: .2;
+    }
+}
+
+view {
+    box-sizing: border-box;
+}
+
+page {
+    background-color: #fff;
+}
+
+.triangle {
+    position: relative;
+    padding-right: 36rpx;
+}
+
+.triangle.triangleup:after {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.triangle:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    box-sizing: border-box;
+    right: 14rpx;
+    height: 8rpx;
+    width: 6rpx;
+    border: none;
+    border-top: 8rpx solid #999;
+    border-left: 6rpx solid transparent;
+    border-right: 6rpx solid transparent;
+}
+
+.location-wrap,.no-authorize,.order-list-blank,.page-blank {
+    width: 100%;
+    margin-top: 360rpx;
+}
+
+.location-wrap .title,.no-authorize .title,.order-list-blank .title,.page-blank .title {
+    display: inline-block;
+    font-size: 44rpx;
+    width: 100%;
+    text-align: center;
+}
+
+.location-wrap .sub-title,.no-authorize .sub-title,.order-list-blank .sub-title,.page-blank .sub-title {
+    display: inline-block;
+    width: 100%;
+    color: #666;
+    font-size: 30rpx;
+    line-height: 44rpx;
+    text-align: center;
+}
+
+.location-wrap .sub-title.notice,.no-authorize .sub-title.notice,.order-list-blank .sub-title.notice,.page-blank .sub-title.notice {
+    margin-top: 20rpx;
+}
+
+.location-wrap .button-container,.no-authorize .button-container,.order-list-blank .button-container,.page-blank .button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 40rpx;
+}
+
+.location-wrap .button-container button,.no-authorize .button-container button,.order-list-blank .button-container button,.page-blank .button-container button {
+    background: #2a99f1;
+    color: #fff;
+    font-size: 32rpx;
+    width: 324rpx;
+    border-radius: 4rpx;
+}
+
+.location-wrap .button-container button.hover,.no-authorize .button-container button.hover,.order-list-blank .button-container button.hover,.page-blank .button-container button.hover {
+    background: #2387d7;
+}
+
+.stepper .btn-weak {
+    display: inline-block;
+    width: 64rpx;
+    height: 64rpx;
+    line-height: 64rpx;
+    text-align: center;
+    border: 0.4rpx solid #ccc;
+    border-radius: 0;
+    vertical-align: top;
+    padding: 0;
+    color: #1f97f4;
+}
+
+.stepper .minus {
+    border-radius: 4rpx 0 0 4rpx;
+}
+
+.stepper .plus {
+    border-radius: 0 4rpx 4rpx 0;
+}
+
+.stepper-number {
+    width: 84rpx;
+    height: 64rpx;
+    display: inline-block;
+    border: 1rpx solid #ccc;
+    vertical-align: top;
+    line-height: 64rpx;
+    text-align: center;
+    border-left: 0;
+    border-right: 0;
+}
+
+.stepper .activedBtn {
+    color: #1f97f4;
+    border: 0.4rpx solid #ccc;
+}
+
+.stepper button[disabled][type=default],.stepper button[disabled]:not([type]) {
+    color: #ccc;
+    background-color: #fff;
+}
+
+.push-btn {
+    border: none;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    line-height: 1.5;
+    background: transparent;
+    border-radius: 0;
+    overflow: inherit;
+}
+
+.push-btn:after {
+    display: none;
+}
+
+.template-srore {
+    position: relative;
+    overflow: hidden;
+    width: 160rpx;
+    height: 24rpx;
+}
+
+.template-srore div {
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.template-srore div.full {
+    z-index: 1;
+}
+
+.template-srore div.empty {
+    width: 100%;
+    z-index: 0;
+}
+
+.template-srore div image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 160rpx!important;
+}
+
+.template-srore-noscore {
+    font-size: 24rpx;
+    color: #666;
+}
+
+.template-srore-noscoreParent {
+    overflow: visible!important;
+}
+
+.template-tags {
+    display: inline-block;
+    white-space: nowrap;
+    width: 100%;
+    height: 18rpx;
+    padding: 16rpx 0 0;
+    margin-left: 2rpx;
+}
+
+.template-tags .tag-text {
+    display: inline-block;
+    padding: 4rpx 8rpx;
+    border-radius: 2rpx;
+    margin-right: 12rpx;
+    text-align: center;
+    font-size: 20rpx;
+    box-sizing: content-box;
+    line-height: 1.4;
+    vertical-align: sub;
+}
+
+.template-tags .tag-text:last-child {
+    margin-right: 0;
+}
+
+.gotopBtn {
+    width: 84rpx;
+    height: 84rpx;
+    border-radius: 50%;
+    border: 1rpx solid #dfe2e5;
+    background: #fff;
+    position: fixed;
+    border-radius: 100px;
+    z-index: 9;
+    bottom: 40rpx;
+    right: 24rpx;
+}
+
+.gotopBtn image {
+    position: absolute;
+    left: 26rpx;
+    top: 24rpx;
+    width: 28rpx;
+    height: 38rpx;
+}

@@ -1,0 +1,74 @@
+.dealplaneone {
+    padding-top: 22rpx;
+    padding-bottom: 32rpx;
+    color: #222;
+    font-size: 28rpx;
+    line-height: 38rpx;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dealplaneone .tag-box {
+    padding-top: 12rpx;
+}
+
+.dealplaneone .tag-box .dealplaneone-tag {
+    display: inline-block;
+    font-size: 20rpx;
+    padding: 4rpx 8rpx;
+    border: 1rpx solid;
+    line-height: 1.4;
+    margin-right: 12rpx;
+    border-radius: 2rpx;
+    vertical-align: sub;
+}
+
+.dealplaneone .tag-box .go-right {
+    display: inline-block;
+    vertical-align: bottom;
+    margin-bottom: 6rpx;
+    height: 40rpx;
+}
+
+.dealplaneone .tag-box .go-right image {
+    width: 28rpx;
+    height: 28rpx;
+}
+
+.dealplaneone-left {
+    flex: 3;
+}
+
+.dealplaneone-left-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    font-size: 28rpx;
+    line-height: 38rpx;
+}
+
+.dealplaneone-right {
+    flex: 1;
+    text-align: right;
+    vertical-align: top;
+    text-align: center;
+}
+
+.dealplaneone-right .paybtn {
+    background: #ff6230;
+    color: #fff;
+    font-size: 26rpx;
+    line-height: 54rpx;
+    border-radius: 4rpx;
+    display: inline-block;
+    margin-top: 10rpx;
+    height: 54rpx;
+    width: 142rpx;
+    text-align: center;
+}
+
+.dealplaneone .preferential {
+    color: #ff8d13;
+    font-size: 22rpx;
+}

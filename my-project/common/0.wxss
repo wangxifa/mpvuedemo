@@ -1,0 +1,277 @@
+.deal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.7);
+    bottom: 0;
+}
+
+.deal .active-info .deal-info-title {
+    border-bottom: none;
+    text-align: center;
+    padding-right: 0;
+    padding-left: 50rpx;
+    border-radius: 2rpx;
+}
+
+.deal .active-info .deal-info-leftparent {
+    display: inline-block;
+}
+
+.deal .active-info .deal-info-chaparent {
+    display: none;
+}
+
+.deal .active-info .tips-scroll {
+    display: block;
+}
+
+.deal .active-info .deal-info-detailTags,.deal .active-info .deal-scroll {
+    display: none;
+}
+
+.deal-info {
+    background: #fff;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 24rpx 32rpx 0;
+    transition: transform .2s;
+    transition: transform .2s,-webkit-transform .2s;
+    transform: translateY(100%);
+}
+
+.deal-info-titleparent {
+    position: relative;
+}
+
+.deal-info-title {
+    font-size: 34rpx;
+    color: #000;
+    font-weight: 800;
+    border-bottom: 1rpx solid #e1e1e1;
+    padding-bottom: 24rpx;
+    padding-right: 50rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.deal-info-chaparent {
+    right: 0;
+}
+
+.deal-info-chaparent,.deal-info .deal-info-leftparent {
+    position: absolute;
+    top: 0;
+    background: #fff;
+    width: 60rpx;
+    height: 56rpx;
+}
+
+.deal-info .deal-info-leftparent {
+    left: 0;
+    display: none;
+}
+
+.deal-info-cha {
+    position: absolute;
+    top: 24rpx;
+    right: 0;
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+    vertical-align: middle;
+    -webkit-transform: rotate(45deg);
+}
+
+.deal-info-cha,.deal-info-cha:after {
+    width: 30rpx;
+    height: 4rpx;
+    background: #7f7f7f;
+}
+
+.deal-info-cha:after {
+    content: ".";
+    display: block;
+    -webkit-transform: rotate(-90deg);
+}
+
+.deal-info-left {
+    width: 20rpx;
+    height: 20rpx;
+    border-right: 4rpx solid #7f7f7f;
+    border-bottom: 4rpx solid #7f7f7f;
+    transform: rotate(130deg);
+    vertical-align: middle;
+    margin-top: 12rpx;
+}
+
+.deal-info-detailTags {
+    font-size: 24rpx;
+    color: #666;
+    border-bottom: 1rpx solid #e1e1e1;
+    padding-bottom: 20rpx;
+    padding-top: 20rpx;
+    position: relative;
+}
+
+.deal-info-detailTags-txtparent {
+    display: inline-block;
+    margin-top: 6rpx;
+}
+
+.deal-info-detailTags-txtparent icon {
+    vertical-align: top;
+}
+
+.deal-info-detailTags-txt {
+    margin-right: 32rpx;
+    margin-left: 8rpx;
+    vertical-align: top;
+    display: inline-block;
+    line-height: 26rpx;
+}
+
+.deal-info-detailTags .icon {
+    background-color: #ff5565;
+    color: #fff;
+    height: 28rpx;
+    width: 28rpx;
+    font-size: 20rpx;
+    line-height: 28rpx;
+    position: absolute;
+    left: 0;
+    top: 30%;
+    text-align: center;
+}
+
+.deal-info-detailTags .arrow {
+    position: absolute;
+    top: 23%;
+    right: 0;
+    transform: rotate(180deg);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 24rpx;
+    width: 24rpx;
+    border-color: #c6cacf;
+}
+
+.deal-info-detailTags .content {
+    padding: 0 38rpx;
+    font-size: 24rpx;
+    line-height: 34rpx;
+}
+
+.deal-scroll,.deal .tips-scroll {
+    height: 478rpx;
+    margin-bottom: 108rpx;
+}
+
+.deal-scroll-planeone,.deal .tips-scroll-planeone {
+    padding-top: 24rpx;
+    padding-bottom: 8rpx;
+    color: #666;
+    font-size: 24rpx;
+    line-height: 36rpx;
+}
+
+.deal-scroll-planeone-title,.deal .tips-scroll-planeone-title {
+    font-size: 30rpx;
+    color: #222;
+    padding-bottom: 8rpx;
+}
+
+.deal-scroll .tripGuaranteeInfoContext,.deal .tips-scroll .tripGuaranteeInfoContext {
+    position: relative;
+}
+
+.deal-scroll .tripGuaranteeInfodesc,.deal .tips-scroll .tripGuaranteeInfodesc {
+    color: #666;
+    font-size: 24rpx;
+    line-height: 36rpx;
+    margin-right: 80rpx;
+}
+
+.deal-scroll .tripGuaranteeInfoicon,.deal .tips-scroll .tripGuaranteeInfoicon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 68rpx;
+    height: 72rpx;
+}
+
+.deal-scroll .tripGuaranteeInfoicon image,.deal .tips-scroll .tripGuaranteeInfoicon image {
+    width: 100%;
+    height: 100%;
+}
+
+.deal .tips-scroll {
+    display: none;
+}
+
+.deal .pay {
+    height: 108rpx;
+    position: absolute;
+    border-top: 1rpx solid #e1e1e1;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+}
+
+.deal .pay .payprice {
+    margin-left: 28rpx;
+    height: 100%;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.deal .pay .payprice .reduce-tag {
+    font-size: 20rpx;
+    line-height: 1;
+    height: auto;
+    color: #ff5565;
+    border: 1rpx solid #ff5565;
+    border-radius: 4rpx;
+    display: inline-block;
+    margin-left: 6rpx;
+    padding: 4rpx;
+}
+
+.deal .pay .payprice view {
+    height: 42rpx;
+    line-height: 1;
+}
+
+.deal .pay .smalltxt {
+    font-size: 24rpx;
+}
+
+.deal .pay .bigtxt {
+    font-size: 42rpx;
+    font-weight: 800;
+}
+
+.deal .pay .nowpaybtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 284rpx;
+    height: 100%;
+    background: #ff6230;
+}
+
+.deal .pay .nowpaybtn .pay-btn {
+    text-align: center;
+    color: #fff;
+    line-height: 108rpx;
+    font-size: 34rpx;
+}
