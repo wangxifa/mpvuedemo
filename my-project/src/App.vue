@@ -9,6 +9,7 @@ export default {
     console.log('app created and cache logs by setStorageSync')
   }
 }
+ 
 </script>
 
 <style>

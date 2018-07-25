@@ -2,7 +2,7 @@
     <div class="app">
         <div class="headerList" v-for="item in items" :key="item">  
              <div class="image">{{item.image}}</div>
-            <!-- <image src="" />            -->
+
             <div class="text">{{item.text}}</div>
         
       </div>

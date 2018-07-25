@@ -1,36 +1,14 @@
 <template>
     <div class="container-homepage">
         <div class="location-container">
-            <div class="header-bar">
-                <div class="city-selected" @click="openCitySelectPage">                
-                    <text class="city-label">{{hotcity}}</text>
-                    <text class="arrow arrow-down"></text>
-                </div>
-                <div @click="gotoSearch" class="search-input-container">
-                    <div class="search-input-box middle">
-                        
-                        <div class="search-state">
-                            <icon color="#707070" size="14" type="search"></icon>
-                            <text>{{!search?'景点/目的地':search}}</text>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="banner-con">
-                
-                <iconList />
-            </div>
-            <div class="tuijian-title">景点推荐</div>
-            
-
             <div class="poi-list-container">
                 <div v-for="item in list" :key="item">
                     <form reportSubmit bindsubmit="gotoDetail">
-                        <!-- data-poiid="{{item.poiIdStr||item.poiid}}" ??-->
+                        
                         <button class="poi-list-item push-btn" formType="submit">
                             <div class="image">
                                 <image mode="aspectFill" :src=item.frontImg />
-                                <!--  mode="aspectFill" -->
+                                
                             </div>
                             <div class="info">
                                 <div class="title">
@@ -39,13 +17,12 @@
                                 </div>
                                 <div class="action">
                                     <div class="score">
-                                        <!-- wx:if="{{!item.rate}}" -->
-                                        <!-- <template is="score" ></template> data="{{...item}} -->
+                                      
                                     </div>
                                     <div class="score-txt">{{item.rate}}</div>
-                                    <!-- wx:if="{{item.rate}}" -->
+                                    
                                     <text>{{item.solds}}</text>
-                                    <!--wx:if="{{item.solds}}"-->
+                                    
                                 </div>
                                 <div class="template-tags">
                                     <div class="tag-text" style="border:0.5px solid #a4d6ff;color: #49adff;background:#ffffff;">
@@ -54,18 +31,16 @@
                                     <div class="tag-text" style="border:0.5px solid #a4d6ff;color: #49adff;background:#ffffff;">
                                         {{item.icon2}}
                                     </div>
-                                    <!-- <div class="tag-text" v-if="icon3" style="border:0.5px solid #a4d6ff;color: #ff5f5f;background:#ffffff;">
-                        {{item.icon3}}
-                    </div> -->
+                                  
                                 </div>
-                                <!-- <template is="tags" data="{{...item}}"></template> -->
+                                
                                 <div class="consume">
                                     <div class="price">
                                         <div class="symble">￥</div>
                                         <div class="number">{{item.lowestPrice}}</div>
                                         <div class="suffix">起</div>
                                     </div>
-                                    <!-- <text class="distance" wx:if="{{item.distance}}">距我{{item.distance}}</text> -->
+                                   
                                     <text class="distance" :if="item.areaName">{{item.areaName}}/{{item.cityName}}</text>
                                 </div>
                             </div>
@@ -74,22 +49,15 @@
                 </div>
             </div>
             <div class="tuijian-title" v-if="noMore">已经没有了</div>
-            
+           
         </div>
     </div>
 </template>
 
 <script>
-import search from "@/components/search/search";
-import searchCity from "@/components/search/searchCity";
-import headerList from "@/components/headerList/headerList";
-import iconList from "@/components/iconList/iconList";
-const app = getApp();
-
-
 export default {
-  data() {
-    return {
+    data(){
+        return {
       noMore:false,
       page:"1",
       pageSize:"3",
@@ -98,49 +66,9 @@ export default {
       views: [],
       page: 1,
       list: [],
-      hotcity: "北京",
-      id:1
-    };
-  },
-
-  components: {
-    search,
-    searchCity,
-    headerList,
-    iconList
-  },
-  created() {
-    this.$http
-      .get("meituan", { xx: 6 })
-      .then(res => {
-        //输出请求数据
-        this.list = res.data.data.list;
-        console.log(res.data);
-        //输出响应头
-        console.log(res.header.selects);
-      })
-      .catch(err => {
-        // console.log(err.status,err.message)
-      });
-  },
-  
-  onLoad(){
-    console.log(this.$root.hotcityId);
-    
-  },
-  methods: {
-    openCitySelectPage: function() {
-      wx.navigateTo({
-        url: "/pages/cityList/main"
-      });
+        }
     },
-    gotoSearch(){
-      wx.navigateTo({
-        url: "/pages/search/main"
-      });
-    }
-  },
-  onReachBottom() {
+    onReachBottom() {
     wx.showLoading({
       title: "加载中"
     });
@@ -165,8 +93,23 @@ export default {
       .catch(e => {
         console.log(e);
       });
-  }
-};
+  },
+onShow() {
+    this.$http
+      .get("meituan", { xx: 6 })
+      .then(res => {
+        //输出请求数据
+        this.list = res.data.data.list;
+        console.log(res.data);
+        //输出响应头
+        console.log(res.header.selects);
+      })
+      .catch(err => {
+        // console.log(err.status,err.message)
+      });
+  },
+}
+
 </script>
 
 <style>
